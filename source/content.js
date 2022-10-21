@@ -1,5 +1,3 @@
-// import optionsStorage from './options-storage.js';
-
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -40,8 +38,6 @@ function get_post_data() {
 }
 
 function init() {
-    // const options = await optionsStorage.getAll();
-
     var main_div = document.querySelector('div[class="card"]');
 
     main_div.innerHTML = '<button id="scormpass_skip_btn" class="button">Skip with Scormpass</button>' + main_div.innerHTML;

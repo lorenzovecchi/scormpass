@@ -25,9 +25,5 @@
             ],
             "run_at": "document_end"
         }
-    ],
-    "options_ui": {
-        "browser_style": true,
-        "page": "options.html"
-    }
+    ]
 }
