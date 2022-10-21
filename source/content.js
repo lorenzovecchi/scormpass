@@ -15,7 +15,6 @@ function get_video_duration() {
             var total_time_sec = (parseInt(durations[0]) * 60) + parseInt(durations[1]) + randomIntFromInterval(10, 180);
         } else { return false; }
 
-        console.log(total_time_sec);
         var date = new Date(total_time_sec * 1000);
 
         return date.getUTCHours().toString().padStart(2, '0') + "%3A" + date.getUTCMinutes().toString().padStart(2, '0') + "%3A" + date.getUTCSeconds().toString().padStart(2, '0') + ".00"
@@ -43,7 +42,7 @@ function init() {
     main_div.innerHTML = '<button id="scormpass_skip_btn" class="button">Skip with Scormpass</button>' + main_div.innerHTML;
     document.getElementById('scormpass_skip_btn').addEventListener('click', function() {
         if (post_data = get_post_data()) {
-            fetch('/mod/scorm/datamodel.php', {
+            fetch('https://elearning.unimib.it/mod/scorm/datamodel.php', {
                 method: 'POST',
                 body: get_post_data(),
                 headers: {
