@@ -3,21 +3,15 @@
     "version": "0.0.1",
     "description": "Scormpass",
     "homepage_url": "https://elearning.unimib.it",
-    "manifest_version": 3,
-    "minimum_chrome_version": "100",
+    "manifest_version": 2,
     "browser_specific_settings": {
         "gecko": {
-            "id": "scormpass",
-            "strict_min_version": "100.0"
+            "id": "scormpass@lorenzovecchi.com"
         }
     },
     "icons": {
         "128": "icon.png"
     },
-    "permissions": [],
-    "host_permissions": [
-        "https://elearning.unimib.it/*"
-    ],
     "content_scripts": [
         {
             "matches": [
